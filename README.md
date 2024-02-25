@@ -3,7 +3,7 @@ Simple shell injection using [win32 API](https://learn.microsoft.com/en-us/windo
 
 
 ## 1) Attatch to an exisiting, or newly created process
-- Using Windows function [OpenProcess()](https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocess) 
+- Opening a handle to a function using Windows function [OpenProcess()](https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocess) 
 
 ## 2) Make space in that process
 - Enough memory for you shell code to fit inside of
